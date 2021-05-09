@@ -16,7 +16,9 @@ and install all required dependencies.
 > Create new folder (e.g. named as project name to be deployed).
 > In the folder just create fabfile.py. After that simply run:
 
-- `fab -r ./example_project_name/ deploy temporary@praetorian.sk temp_password`
+- `fab -r ./example_project_name/ deploy remote_name`
+
+> Additional useful information is in the project's example folder in the fabfile.py file.
 
 ---
 Developed with 💙 and ☕️ by [Adam Žúrek](https://zurek11.github.io/)

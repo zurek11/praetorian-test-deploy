@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.8"
 python-dotenv = "^0.15.0"
 fabric = "^2.5.0"
-praetorian-fabric = "^0.1.1"
+praetorian-fabric = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
 

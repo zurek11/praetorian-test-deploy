@@ -6,7 +6,7 @@ authors = ["Adam Žúrek <adamzurek14@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 python-dotenv = "^0.15.0"
 fabric = "^2.5.0"
 praetorian-fabric = "^0.1.2"

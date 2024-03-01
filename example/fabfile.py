@@ -20,11 +20,14 @@ praetorian_config = PraetorianConfig(project_name='example')
 def deploy(ctx, remote_name):
     ctx = praetorian_config.connect(ctx, remote_name)
 
-    ctx.run(f'mkdir {{{{ test_file }}}}')
-    ctx.run(f'ls {{{{ command }}}}')
-    ctx.run(f'rmdir {{{{ test_file }}}}')
-
     ctx.run(f'mkdir {{{{ test_file1 }}}} {{{{ test_file2 }}}}')
-    ctx.run(f'ls {{{{ command }}}}')
-    ctx.run(f'exit')
+    ctx.run('ls')
+    ctx.run(f'rmdir {{{{ test_file1 }}}} {{{{ test_file2 }}}}')
+
+    ctx.run(f'mkdir {{{{ test_file2 }}}} {{{{ test_file3 }}}}')
+    ctx.run('ls')
+    ctx.run(f'rmdir {{{{ test_file2 }}}} && rmdir {{{{ test_file3 }}}}')
+
+    ctx.run('exit')
+
     return
